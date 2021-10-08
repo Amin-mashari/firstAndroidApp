@@ -100,7 +100,6 @@
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
         android:text="signup"
-        android:textColor="#fff"
         app:layout_constraintTop_toBottomOf="@+id/tvConfirmPass"
         tools:layout_editor_absoluteX="30dp" />
 

@@ -16,12 +16,6 @@
             android:name=".MainPageActivity"
             android:exported="true" />
         <activity
-            android:name=".UActivity"
-            android:exported="true" />
-        <activity
-            android:name=".MainpageActivity"
-            android:exported="true" />
-        <activity
             android:name=".SignupActivity"
             android:exported="true" />
         <activity

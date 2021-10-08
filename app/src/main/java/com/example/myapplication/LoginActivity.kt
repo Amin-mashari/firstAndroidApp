@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.TextView
 import android.content.Intent
 import android.view.View
+import android.view.Window
 import android.widget.Toast
 import com.example.utils.User
 
@@ -13,6 +14,9 @@ import com.example.utils.User
 class LoginActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //remove action bar
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        supportActionBar?.hide()
         setContentView(R.layout.activity_login)
 
         val loginBtn = findViewById<Button>(R.id.loginBtn)

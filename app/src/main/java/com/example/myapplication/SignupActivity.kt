@@ -3,6 +3,7 @@ package com.example.myapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Window
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -12,6 +13,9 @@ import com.example.utils.User
 class SignupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //remove action bar
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        supportActionBar?.hide()
         setContentView(R.layout.activity_signup)
 
         val signupBtn = findViewById<Button>(R.id.signupBtn)

@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.content.Intent
 import android.os.Handler
 import android.os.Looper
-import android.view.WindowManager
+import android.view.Window
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.TextView
@@ -19,12 +19,13 @@ lateinit var userLocalDb: UserLocalStore
 
 class MainActivity : AppCompatActivity() {
 
+    private val DELAY = 5000
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        window.setFlags(
-            WindowManager.LayoutParams.FLAG_FULLSCREEN,
-            WindowManager.LayoutParams.FLAG_FULLSCREEN
-        )
+        //remove action bar
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        supportActionBar?.hide()
         setContentView(R.layout.activity_logo)
 
         val topAnim = AnimationUtils.loadAnimation(this, R.anim.top_animation)
@@ -47,7 +48,7 @@ class MainActivity : AppCompatActivity() {
                 finish()
 
             }
-        }, 4500)
+        }, DELAY.toLong())
     }
 
 
