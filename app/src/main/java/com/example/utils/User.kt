@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.utils
 
 class User() {
     private var username: String = ""

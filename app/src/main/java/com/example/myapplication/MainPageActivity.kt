@@ -26,7 +26,7 @@ class MainPageActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun logOutOperation() {
         userLocalDb.setUserLoggedOut()
-        startActivity(Intent(this, MainActivity::class.java))
+        startActivity(Intent(this, LoginActivity::class.java))
         finish()
     }
 
